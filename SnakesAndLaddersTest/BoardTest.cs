@@ -23,7 +23,7 @@ public class BoardTest
     {
         var expectedSquare = 2;
 
-        var playerStatus = _board.Move(new PlayerStatus(1, false), 1);
+        var playerStatus = _board.Move(new PlayerStatus(1, false, 0), 1);
 
         playerStatus.ShouldBe(expectedSquare);
     }
@@ -33,7 +33,7 @@ public class BoardTest
     {
         var expectedEndSquare = 97;
 
-        var playerStatus = _board.Move(new PlayerStatus(97, false), 4);
+        var playerStatus = _board.Move(new PlayerStatus(97, false, 0), 4);
 
         playerStatus.ShouldBe(expectedEndSquare);
     }
@@ -43,7 +43,7 @@ public class BoardTest
     {
         var expectedEndSquare = 10;
 
-        var playerStatus = _board.Move(new PlayerStatus(4, false), 1);
+        var playerStatus = _board.Move(new PlayerStatus(4, false, 0), 1);
 
         playerStatus.ShouldBe(expectedEndSquare);
     }
@@ -53,7 +53,7 @@ public class BoardTest
     {
         var expectedEndSquare = 15;
 
-        var playerStatus = _board.Move(new PlayerStatus(19, false), 1);
+        var playerStatus = _board.Move(new PlayerStatus(19, false, 0), 1);
 
         playerStatus.ShouldBe(expectedEndSquare);
     }

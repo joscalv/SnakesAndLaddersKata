@@ -30,7 +30,8 @@ public class Board
         return playerStatus with
         {
             Square = newPosition,
-            HasWin = newPosition== _size
+            HasWon = newPosition== _size,
+            LastDiceRoll = movement
         };
     }
 

@@ -60,15 +60,15 @@ public class GameTest
     public void PlayerMustWinsIfIsAt97AndMove3()
     {
         var expectedEndSquare = 100;
-        var expectedHasWin = true;
+        var expectedHasWon = true;
 
         var diceMock = new Mock<IDice>();
         diceMock.Setup(m => m.Roll()).Returns(3);
-        var game = new Game(_board, diceMock.Object, new PlayerStatus(97, false));
+        var game = new Game(_board, diceMock.Object, new PlayerStatus(97, false, 0));
 
         PlayerStatus newStatus = game.Play();
 
-        newStatus.ShouldBe(expectedEndSquare, expectedHasWin);
+        newStatus.ShouldBe(expectedEndSquare, expectedHasWon);
     }
 
     [Fact]
@@ -78,7 +78,7 @@ public class GameTest
 
         var diceMock = new Mock<IDice>();
         diceMock.Setup(m => m.Roll()).Returns(4);
-        var game = new Game(_board, diceMock.Object, new PlayerStatus(97, false));
+        var game = new Game(_board, diceMock.Object, new PlayerStatus(97, false, 0));
 
         PlayerStatus newStatus = game.Play();
 

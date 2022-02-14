@@ -11,7 +11,7 @@ public class Game
     {
         _dice = dice;
         _board = board;
-        PlayerStatus = new PlayerStatus(1, false);
+        PlayerStatus = new PlayerStatus(1, false,0);
     }
 
     public Game(Board board, IDice dice, PlayerStatus playerStatus)
